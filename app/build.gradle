@@ -1,0 +1,99 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'fasanchez87'
+            keyPassword 'system1987'
+            storeFile file('D:/KEY APPS INGENIA/Key CC Tulua/key_cctulua.jks')
+            storePassword 'system1987'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.ingeniapps.cctulua"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 14
+        versionName "14.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    productFlavors {
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '26.0.2'
+                }
+            }
+        }
+    }
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true;
+    }
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.google.firebase:firebase-core:10.2.6'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:27.0.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:support-v4:27.+'
+    compile 'com.android.support:recyclerview-v7:27.+'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:cardview-v7:27.+'
+    compile 'com.google.android.gms:play-services:10.2.6'
+    compile 'com.google.firebase:firebase-messaging:10.2.6'
+    compile 'com.google.firebase:firebase-crash:10.2.6'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    compile 'com.yanzhenjie:permission:1.0.8'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+}
+
+
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">C.C Tuluá</string>
+
+    <string name="item_1">Marcas</string>
+    <string name="item_2">Ofertas</string>
+    <string name="item_3">Contacto</string>
+    <string name="item_4">Cartelera</string>
+    <string name="item_5">Buscar</string>
+    <string name="title">Centro Comercial Tuluá</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

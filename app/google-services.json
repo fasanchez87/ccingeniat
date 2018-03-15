@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "709282357091",
+    "firebase_url": "https://cctulua-cbe79.firebaseio.com",
+    "project_id": "cctulua-cbe79",
+    "storage_bucket": "cctulua-cbe79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709282357091:android:40acec40c6ec20a6",
+        "android_client_info": {
+          "package_name": "com.ingeniapps.cctulua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709282357091-effpfsk3n4kdodfsv0i63r6vcfg08hvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingeniapps.cctulua",
+            "certificate_hash": "98e0e89bbc74cb9e7c9e8227459848322649d7b8"
+          }
+        },
+        {
+          "client_id": "709282357091-rmsivt2snt6ch97akn3oc8p8btng27ce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU_6S9mGWQxL0TtnwofusuXAuR8Wdxwg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709282357091-rmsivt2snt6ch97akn3oc8p8btng27ce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

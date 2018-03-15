@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ingeniapps.cctulua.fragment.fragment_cartelera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/layoutMacroEsperaLocales">
+
+            <ImageView
+                android:id="@+id/not_found_convenios"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:src="@drawable/sin_resu" />
+
+            <RelativeLayout
+                android:id="@+id/layoutEsperaConvenios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/colorPrimary"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Cargando..."
+                    android:textSize="18sp"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearHabilitarLocales"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:background="#f89c2b">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:hint="¿Que deseas encontrar?"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/style_editext_cuadrangular"
+                    android:theme="@style/EditTextFondoBlanco"
+                    android:textColor="@color/colorEditTextGris"
+                    android:textColorHint="@color/colorEditTextGris"
+                    android:layout_weight="2"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:id="@+id/editTextBusquedaLocal"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0"
+                    android:padding="4dp"
+                    app:srcCompat="@drawable/ic_search"
+                    tools:ignore="contentDescription" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/editTextNumConvenios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="Para buscar, ingresa mínimo 3 caracteres"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlanco"
+                android:background="@color/colorVerdeCC"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_locales_busqueda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_weight="1"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

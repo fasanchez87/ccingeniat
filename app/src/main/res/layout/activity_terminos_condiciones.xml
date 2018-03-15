@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlanco"
+    android:orientation="vertical"
+    android:scaleType="fitXY"
+    tools:context="com.ingeniapps.cctulua.activity.Splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/ll_espera_empresa">
+
+        <RelativeLayout
+            android:id="@+id/layoutEsperaVotos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressBarNotificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateTint="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBarNotificacion"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="4dp"
+                android:text="Un momento..."
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/ll_terminos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@color/colorBlanco"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            app:srcCompat="@drawable/terminos" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorBlanco"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webViewTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:background="@color/colorBlanco"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check_aceptar_terminos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="8"
+                android:text="Acepto los términos y condiciones"
+                android:checked="false"
+                android:textColor="@color/colorGrisTextCollpser"
+                android:theme="@style/checkBoxStyle1" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buttonIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Continuar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonIngresarDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGris"
+            android:text="Continuar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlanco" />
+
+     </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

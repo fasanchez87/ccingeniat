@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="#FFFFFF"
+        card_view:cardElevation="3dp"
+        card_view:contentPadding="3dp">
+
+        <LinearLayout
+            android:id="@+id/ll_background_general_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/logoLocal"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="13dp">
+
+                <TextView
+                    android:id="@+id/nombreLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bodytech"
+                    android:textColor="#050507"
+                    android:textSize="20dip"
+                   />
+
+                <TextView
+                    android:id="@+id/ubicacionLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local H"
+                    android:textColor="#808080"
+                    android:textSize="18dip" />
+
+                <TextView
+                    android:id="@+id/descripcionLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En Bike House amamos tu pasión!!! Las mejores marcas de ciclismo del mundo en un solo lugar desde 1989."
+                    android:textColor="#08080a"
+                    android:textSize="13dip"
+                    android:maxLength="100"
+                    android:paddingTop="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/telLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0322252525"
+                    android:textColor="#08080a"
+                    android:textSize="13dip"
+                    android:maxLength="100"
+                    android:paddingTop="2dp"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
