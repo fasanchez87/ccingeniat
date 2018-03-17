@@ -497,6 +497,7 @@ public class Principal extends AppCompatActivity
         protected void onPostExecute(String string)
         {
             versionPlayStore = string;
+
             if(!TextUtils.isEmpty(versionPlayStore)&&!TextUtils.equals(versionPlayStore,""))
             {
                 if (compareVersions(currentVersion, versionPlayStore) == -1)

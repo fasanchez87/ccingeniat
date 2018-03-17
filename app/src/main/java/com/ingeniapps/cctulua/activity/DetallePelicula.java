@@ -438,6 +438,7 @@ public class DetallePelicula extends YouTubeBaseActivity implements
                                 dirPelicula.setText(response.getString("dirPelicula"));
                                 actoresPelicula.setText(response.getString("actPelicula"));
                                 desPelicula.setText(response.getString("desPelicula"));
+                                genPelicula.setText(response.getString("nomGenero"));
                                 timestamp = Long.parseLong(response.getString("fecEstPelicula")) * 1000L;
                                 timeAgo = DateUtils.getRelativeTimeSpanString(timestamp,
                                         System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS);
