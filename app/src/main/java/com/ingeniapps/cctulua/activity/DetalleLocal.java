@@ -593,7 +593,7 @@ public class DetalleLocal extends AppCompatActivity implements RationaleListener
                                 span.setSpan(new ForegroundColorSpan(colorLink), 0, response.getString("telLocal").length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                                 telLocal.setText(span);
 
-                                dirLocal.setText("Local "+response.getString("ubicacionLocal"));
+                                dirLocal.setText(""+response.getString("ubicacionLocal"));
 
                                 ll_espera_local.setVisibility(View.GONE);
                                 scrollDetalleLocal.setVisibility(View.VISIBLE);
