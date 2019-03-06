@@ -23,6 +23,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -81,7 +83,6 @@ public class Principal extends AppCompatActivity
     Context context;
     Dialog dialog;
     private BroadcastReceiver mRegistrationBroadcastReceiver;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -526,6 +527,26 @@ public class Principal extends AppCompatActivity
                 }
             }
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater findMenuItems = getMenuInflater();
+        findMenuItems.inflate(R.menu.menu_cuenta, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.opcion_config:
+                Intent aboutIntent = new Intent(Principal.this, Cuenta.class);
+                startActivity(aboutIntent);
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

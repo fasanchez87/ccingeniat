@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/ll_espera_detalle_evento">
 
         <RelativeLayout
@@ -83,7 +83,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/app_bar_principal"
         android:fillViewport="true"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout

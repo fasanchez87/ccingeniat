@@ -71,11 +71,11 @@ public class fragment_cartelera extends Fragment
     {
         super.onCreate(savedInstanceState);
 
-        sharedPreferences=new gestionSharedPreferences(getActivity().getApplicationContext());
-        listadoPeliculas=new ArrayList<Pelicula>();
-        vars=new vars();
-        context = getActivity();
-        pagina=0;
+            sharedPreferences=new gestionSharedPreferences(getActivity().getApplicationContext());
+            listadoPeliculas=new ArrayList<Pelicula>();
+            vars=new vars();
+            context = getActivity();
+            pagina=0;
     }
 
     @Override

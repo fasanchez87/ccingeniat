@@ -417,6 +417,8 @@ public class fragment_ccomercial extends Fragment implements BaseSliderView.OnSl
                             layoutEspera.setVisibility(View.GONE);
                             not_found_empleados.setVisibility(View.VISIBLE);*/
 
+                           Log.i("cctuluaerror",""+error.getMessage().toString());
+
                             AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(fragment_ccomercial.this.getActivity(),R.style.AlertDialogTheme));
                             builder
                                     .setMessage("Error de conversión Parser, contacte a su proveedor de servicios.")
@@ -461,8 +463,10 @@ public class fragment_ccomercial extends Fragment implements BaseSliderView.OnSl
                         try
                         {
                             if(response.getBoolean("status"))
-                                {
+                            {
                                 listadoLocales.clear();
+
+                                Log.i("cctuluaerror",""+response.toString());
 
                                 JSONArray listaLocales = response.getJSONArray("locales");
 

@@ -47,17 +47,30 @@
             android:label=""
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name=".activity.DetalleOferta" android:screenOrientation="portrait" />
-        <activity android:name=".activity.DetalleEvento" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.DetallePelicula" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.DetalleLocal" android:screenOrientation="portrait"/>
-        <activity android:name=".activity.Buscar" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.DetalleOferta"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DetalleEvento"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DetallePelicula"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DetalleLocal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Buscar"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="631c6105886883dda61813eb33aec55acf43ea0f" />
 
-        <activity android:name=".activity.TerminosCondiciones" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.TerminosCondiciones"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Cuenta"></activity>
     </application>
 
 </manifest>

@@ -29,8 +29,8 @@ android {
         applicationId "com.ingeniapps.cctulua"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 15
-        versionName "16.0"
+        versionCode 20
+        versionName "1.1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -93,7 +93,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
 }
-
 
 // Add to the bottom of the file
 apply plugin: 'com.google.gms.google-services'
